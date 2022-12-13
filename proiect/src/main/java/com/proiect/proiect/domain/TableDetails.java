@@ -10,5 +10,5 @@ import java.util.Map;
 @NoArgsConstructor
 @AllArgsConstructor
 public class TableDetails {
-    private Map<String, String> tableName;
+    private String tableName;
 }

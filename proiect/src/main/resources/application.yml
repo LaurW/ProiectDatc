@@ -1,10 +1,8 @@
 spring:
   cloud:
     azure:
-      active-directory:
-        enable: true
-        profile:
-          tenant-id: 6bb41fe4-40a3-4a10-b6cd-38278e78b21a
-        credentials:
-          client-id: 11ca7d89-de81-452a-bfef-c137a631ebe8
-          client-secret: 7t98Q~iFp9LjM0fPPjH35-jdUOKkwWEla.0tfaX0
+      storage:
+        table:
+          account-name: proiectdatc
+          account-key: 4rAGkkF2JqgpqQK9kguKr9K/uxPLG+vQmJgGsxDTB/DlWX1SEGxDFVSgqqInzcpoj+i/1TXaC8ad+ASt4i6FKw==
+          endpoint: https://proiectdatc.table.core.windows.net

@@ -1,5 +1,8 @@
 package com.proiect.proiect.adaptors.rest;
 
+import com.azure.data.tables.TableClient;
+import com.azure.data.tables.TableServiceClient;
+import com.azure.data.tables.TableServiceClientBuilder;
 import com.proiect.proiect.domain.TableDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
@@ -11,16 +14,17 @@ public class TablesClient {
 
     @Autowired
     private RestTemplate restTemplate;
-    private static final String storageAccountName = "proiectdatc";
-
+    public final String connectionString ="DefaultEndpointsProtocol=https;AccountName=proiectdatc;AccountKey=4rAGkkF2JqgpqQK9kguKr9K/uxPLG+vQmJgGsxDTB/DlWX1SEGxDFVSgqqInzcpoj+i/1TXaC8ad+ASt4i6FKw==;EndpointSuffix=core.windows.net";
     public ResponseEntity<String> createAzureTable(TableDetails tableDetails) {
-        HttpHeaders headers = new HttpHeaders();
-        headers.add("Authorization","SharedKey ");
-        headers.add("proiectdatc","4rAGkkF2JqgpqQK9kguKr9K/uxPLG+vQmJgGsxDTB/DlWX1SEGxDFVSgqqInzcpoj+i/1TXaC8ad+ASt4i6FKw==");
-        headers.add("Content-Type","application/json");
-        headers.add("Content-Length","0");
-        HttpEntity httpEntity = new HttpEntity(headers);
-        restTemplate.exchange("https://proiectdatc.table.core.windows.net/Tables", HttpMethod.POST,httpEntity,String.class);
+        final String tableName = tableDetails.getTableName();
+
+        // Create a TableServiceClient with a connection string.
+        TableServiceClient tableServiceClient = new TableServiceClientBuilder()
+                .connectionString(connectionString)
+                .buildClient();
+
+        // Create the table if it not exists.
+        TableClient tableClient = tableServiceClient.createTableIfNotExists(tableName);
         return new ResponseEntity<>(HttpStatus.ACCEPTED);
     }
 }
