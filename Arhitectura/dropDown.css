@@ -24,14 +24,14 @@ ul li a {
     text-align: center;
     border-top: 1px solid #ffffff;
     padding: 10px 92.5px 10px 92.5px;
-    background: #00BFFF;
+    background: #7f00ba;
     margin-left: 1px;
     margin-right: 1px;
     white-space: nowrap;
 }
 
 ul li a:hover {
-    background: #00BFFF;
+    background: #7f00ba;
 }
 
 li:hover ul {
