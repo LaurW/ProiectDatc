@@ -16,13 +16,21 @@ li ul {
 
 }
 
+ul {
+    text-align: center;
+    }
+    
+li {
+    display: inline-block;
+    }
+
 ul li a {
     display: block;
-    width: 185;
+    width: 277;
     text-decoration: none;
-    color: black;
+    color: white;
     text-align: center;
-    border-top: 1px solid #ffffff;
+    border-top: 1px solid #ffffff00;
     padding: 10px 92.5px 10px 92.5px;
     background: #7f00ba;
     margin-left: 1px;
