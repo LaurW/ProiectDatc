@@ -27,4 +27,13 @@ public class TablesClient {
         TableClient tableClient = tableServiceClient.createTableIfNotExists(tableName);
         return new ResponseEntity<>(HttpStatus.ACCEPTED);
     }
+
+    public ResponseEntity<String> updateAzureTable(TableDetails tableDetails)
+    {
+        return new ResponseEntity<>(HttpStatus.ACCEPTED);
+    }
+    public ResponseEntity<String> deleteAzureTable(TableDetails tableDetails)
+    {
+        return new ResponseEntity<>(HttpStatus.ACCEPTED);
+    }
 }
