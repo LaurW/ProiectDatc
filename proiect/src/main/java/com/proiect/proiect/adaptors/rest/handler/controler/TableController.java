@@ -17,10 +17,6 @@ public class TableController {
     public void createTable(@RequestBody TableDetails tableDetails) {
         tablesClient.createAzureTable(tableDetails);
     }
-    @RequestMapping(value = "/tables", method = RequestMethod.PUT)
-    public void updateTable(@RequestBody TableDetails tableDetails) {
-        tablesClient.updateAzureTable(tableDetails);
-    }
     @RequestMapping(value = "/tables", method = RequestMethod.DELETE)
     public void deleteTable(@RequestBody TableDetails tableDetails) {
         tablesClient.deleteAzureTable(tableDetails);

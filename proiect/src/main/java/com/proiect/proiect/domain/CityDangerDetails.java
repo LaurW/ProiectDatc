@@ -8,10 +8,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CityDangerDetails {
-    private int UID;
+    private int uid;
+    private String rowKey;
     private String date;
     private String type;
     private String status;
     private String adresa;
+    private String nameOfTable;
 }
 
