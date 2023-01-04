@@ -15,5 +15,7 @@ public class CityDangerDetails {
     private String status;
     private String adresa;
     private String nameOfTable;
+    private int puncte;
+    private String numeComplet;
 }
 

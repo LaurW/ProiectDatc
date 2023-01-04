@@ -32,6 +32,8 @@ public class CityDangerClient {
             dangerInfo.put("Adresa", cityDangerDetails.getAdresa());
             dangerInfo.put("Tip", cityDangerDetails.getType());
             dangerInfo.put("Status", cityDangerDetails.getStatus());
+            dangerInfo.put("Puncte", cityDangerDetails.getPuncte());
+            dangerInfo.put("NumeComplet", cityDangerDetails.getNumeComplet());
 
             TableEntity cityDanger = new TableEntity(partitionKey, rowKey).setProperties(dangerInfo);
 
@@ -55,6 +57,9 @@ public class CityDangerClient {
             specificEntity.getProperties().put("Adresa", cityDangerDetails.getAdresa());
             specificEntity.getProperties().put("Tip", cityDangerDetails.getType());
             specificEntity.getProperties().put("Status", cityDangerDetails.getStatus());
+            specificEntity.getProperties().put("Puncte", cityDangerDetails.getPuncte());
+            specificEntity.getProperties().put("NumeComplet", cityDangerDetails.getNumeComplet());
+
             tableClient.updateEntity(specificEntity, TableEntityUpdateMode.REPLACE);
         } catch (Exception e) {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
