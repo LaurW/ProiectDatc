@@ -17,6 +17,10 @@
 body {
         background-image: url('background.jpg');
       }
+.form-center {
+  display:flex;
+  justify-content: center;
+}
 </style>
 <title>Adaugare Tabela</title>
     <link href="dropDown.css" rel="stylesheet" type="text/css">
@@ -43,18 +47,31 @@ body {
 
 <body>
     <br><br><br>
-    <br><br><br>
-    <br><br><br>
+    <br>
 
 <br>
-    <label for="tablen">Nume Tabela</label>
+<div class="form-center">
+<form >
+<div>
+    <label for="tablen">Table Name</label>
+    </div>
+    <div>
     <input type="text" id="tablen" name="tablen"><br><br>
-    <button class = "button" onclick = "myfunction()">Create</button>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
+</div>
+  </form>
+</div>
+<div class="form-center">
+  <form action="none">
+    <div>
+      <button class = "button" onclick = "myfunction()" style="height:50px;width:250px">Create</button>
+        </div>
+  </form>
+  </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    
 
-    <a href="Site-basic.html"><button class="button">BACK</button></a>
+    <a href="Site-basic.html"><button class="button" style="height:50px;width:250px">BACK</button></a>
 
 </body>
 

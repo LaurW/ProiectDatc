@@ -17,6 +17,10 @@
 body {
         background-image: url('background.jpg');
       }
+.form-center {
+  display:flex;
+  justify-content: center;
+}
 </style>
 <title>Modificare Evenimente</title>
     <link href="dropDown.css" rel="stylesheet" type="text/css">
@@ -42,36 +46,82 @@ body {
 </head>
 
 <body>
-  <label for="uid">User ID</label>
-  <input type="text" id="uid" name="uid"><br><br>
-  <label for="danger">Danger</label>
-  <input type="text" id="danger" name="danger"><br><br>
-  <label for="data">Date</label>
-  <input type="data" id="data" name="data"><br><br>
-  <label for="even">Type</label>
-  <select name="even" id="even">
-      <option value="gheata">Atentie Gheata</option>
-      <option value="turtut">Atentie Turturi</option>
-      <option value="gropi">Gropi</option>
-      <option value="lucrari">Efectuari lucrari</option>
-    </select>
-    <br><br>
-    <label for="status">Status</label>
-    <input type="status" id="status" name="status"><br><br>
-    <label for="adresa">Adress</label>
-    <input type="adresa" id="adresa" name="adresa"><br><br>
-    <label for="nm">Name of the Table</Table></label>
-    <input type="nm" id="nm" name="nm"><br><br>
-    <label for="pct">Points</label>
-    <input type="pct" id="pct" name="pct"><br><br>
-    <label for="name">Complete Name</label>
-    <input type="name" id="name" name="name"><br><br>
-    <button class = "button" onclick = "myfunction()">Modify</button>
+  <div class="form-center">
+  <form>
+    <div>
+    <label for="uid">User ID</label>
+    </div>
+    <div>
+    <input type="text" id="uid" name="uid"><br><br>
+    </div>
+    <div>
+    <label for="danger">Danger</label>
+    </div>
+    <div>
+    <input type="text" id="danger" name="danger"><br><br>
+    </div>
+    <div>
+    <label for="data">Date</label>
+    </div>
+    <div>
+    <input type="data" id="data" name="data"><br><br>
+    </div>
+    <div>
+    <label for="even">Type</label>
+    </div>
+    <div>
+    <select name="even" id="even">
+        <option value="gheata">Atentie Gheata</option>
+        <option value="turtut">Atentie Turturi</option>
+        <option value="gropi">Gropi</option>
+        <option value="lucrari">Efectuari lucrari</option>
+      </select>
+      <br><br>
+      </div>
+      <div>
+      <label for="status">Status</label>
+    </div>
+    <div>
+      <input type="status" id="status" name="status"><br><br>
+      </div>
+      <div>
+      <label for="adresa">Adress</label>
+    </div>
+    <div>
+      <input type="adresa" id="adresa" name="adresa"><br><br>
+      </div>
+      <div>
+      <label for="nm">Table Name</Table></label>
+    </div>
+    <div>
+      <input type="nm" id="nm" name="nm"><br><br>
+      </div>
+      <div>
+      <label for="pct">Points</label>
+    </div>
+    <div>
+      <input type="pct" id="pct" name="pct"><br><br>
+      </div>
+      <div>
+      <label for="name">Complete Name</label>
+    </div>
+    <div>
+      <input type="name" id="name" name="name"><br><br>
+      </div>
+    </form>
+    </div>
+    <div class="form-center">
+      <form action="none">
+        <div>
+          <button class = "button" onclick = "myfunction()" style="height:50px;width:250px">Modify</button>
+            </div>
+      </form>
+      </div>
     <br><br><br>
     <br><br><br>
     <br><br><br>
 
-    <a href="Site-basic.html"><button class="button">BACK</button></a>
+    <a href="Site-basic.html"><button class="button" style="height:50px;width:250px">BACK</button></a>
 
 </body>
 
