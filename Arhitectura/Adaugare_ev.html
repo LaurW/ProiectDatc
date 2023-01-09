@@ -3,9 +3,9 @@
 <head>   
 <style>
 .button {
-  background-color: #7f00ba; 
+  background-color: #00FFFF; 
   border: none;
-  color: white;
+  color: black;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -18,6 +18,24 @@ body {
         background-image: url('background.jpg');
       }
 </style>
+<script type = "text/javascript">  
+  const myfunction = async () => {
+const response = await fetch('http://localhost:8080/tables', {
+method: 'POST',
+body: tablen, // string or object
+headers: {
+'Content-Type': 'application/json'
+}
+});
+const myJson = await response.json(); 
+componentDidMount()
+{
+// Converting a string to JSON
+let jsonData = JSON.stringify(tablen);
+console.log(jsonData);
+}
+}
+</script>  
 <title>Adaugare Eveniment</title>
     <link href="dropDown.css" rel="stylesheet" type="text/css">
 </head>
@@ -26,15 +44,33 @@ body {
 
 
 <br>
-<label for="even">Lista evenimente</label>
+<label for="uid">User ID</label>
+<input type="text" id="uid" name="uid"><br><br>
+<label for="danger">Danger</label>
+<input type="text" id="danger" name="danger"><br><br>
+<label for="data">Date</label>
+<input type="data" id="data" name="data"><br><br>
+<label for="even">Type</label>
 <select name="even" id="even">
     <option value="gheata">Atentie Gheata</option>
     <option value="turtut">Atentie Turturi</option>
     <option value="gropi">Gropi</option>
     <option value="lucrari">Efectuari lucrari</option>
   </select>
-		<br><br><br><br><br><br><br><br><br><br><br><br>
-		<button class="button">Adauga</button>
+  <br><br>
+  <label for="status">Status</label>
+  <input type="status" id="status" name="status"><br><br>
+  <label for="adresa">Adress</label>
+  <input type="adresa" id="adresa" name="adresa"><br><br>
+  <label for="nm">Name of the Table</Table></label>
+  <input type="nm" id="nm" name="nm"><br><br>
+  <label for="pct">Points</label>
+  <input type="pct" id="pct" name="pct"><br><br>
+  <label for="name">Complete Name</label>
+  <input type="name" id="name" name="name"><br><br>
+
+		<br><br><br><br><br>
+		<button class = "button" onclick = "myfunction()">Add event</button>
         <br><br><br><br><br><br><br><br><br><br><br><br>
         <a href="Site-basic.html"><button class="button">BACK</button></a>
 </body>
